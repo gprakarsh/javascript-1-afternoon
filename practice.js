@@ -43,7 +43,7 @@ function doubleCheck (array){
       x++;
     }
   }
-  if (x=0){
+  if (x==0){
     array.push("chocolate");
   }
   return array;
@@ -90,7 +90,7 @@ var ruff = dog.bark();
 
 function looper (array){
   var mySum=0;
-  for(i=0;i,array.length;i++){
+  for(i=0;i<array.length;i++){
     if(array[i]%2!=0||array[i]>=100){
       mySum+=array[i];
     }
@@ -158,13 +158,13 @@ function pond() {
 let globalScope = ["duck"];
 
 //This array should contain the variable names (as strings) accessible in the bathroom function.
-let bathroomScope = ["sailorDuck", "rubberDuck"];
+let bathroomScope = ["rubberDuck","duck"];
 
 //This array should contain the variable names (as strings) accessible in the bathtub function.
-let bathtubScope = ["sailorDuck"];
+let bathtubScope = ["sailorDuck","rubberDuck","duck"];
 
 //This array should contain the variable names (as strings) accessible in the pond function.
-let pondScope = ["realDuck"];
+let pondScope = ["duck","realDuck"];
 
 //////////////////PROBLEM 10////////////////////
 
@@ -172,7 +172,7 @@ let pondScope = ["realDuck"];
 //function which returns your name.
 
 function outerFn(){
-  return (name)=>name;
+  return (name)=>"Prakarsh";
 }
 
 //Now save the result of invoking outerFn into a variable called innerFn.
@@ -181,4 +181,4 @@ var innerFn = outerFn();
 
 //Now invoke innerFn and save the result to a variable called finalResult.
 
-var finalResult = innerFn;
+var finalResult = innerFn("Prakarsh");
